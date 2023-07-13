@@ -6,8 +6,13 @@ all:
           hosts:
             172-31-21-135:
           vars:
+            op_type: started
             services: 
               started:
+                svc_name:
+                - ubuntu
+                - centos
+              stopped:
                 svc_name:
                 - ubuntu
                 - centos

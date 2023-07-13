@@ -1,7 +1,9 @@
 ---
+- debug:
+    msg: "{{ item }}"
 - name: Pull default Docker image
   community.docker.docker_image:
-    name: ubuntu:latest
+    name: "{{ item }}"
     source: pull
 
 - name: Create default containers
@@ -9,4 +11,4 @@
     name: "{{ item }}"
     image: "{{ item }}"
     command: "{{ default_container_command }}"
-    state: started
+    state: "{{ op_type }}"
