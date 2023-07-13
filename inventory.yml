@@ -6,12 +6,11 @@ all:
           hosts:
             172-31-21-135:
           vars:
-            services:
-              started: 
-                - nginx
+            services: 
+              started:
+                svc_name:
                 - ubuntu
                 - centos
-                - alpine
         webservers2:
           hosts:
             172.31.17.147:
